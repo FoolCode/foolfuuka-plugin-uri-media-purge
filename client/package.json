@@ -1,9 +1,0 @@
-{
-  "name": "URI-Media-Purge-Client",
-  "description": "Client for FoolFuuka URI Media Purge Plugin",
-  "version": "1.0.0",
-  "dependencies": {
-    "hiredis": "*",
-    "redis": "*"
-  }
-}
