@@ -20,11 +20,6 @@ class URIMediaPurge extends Model
     protected $dc;
 
     /**
-     * @var Preferences
-     */
-    protected $preferences;
-
-    /**
      * @var RadixCollection
      */
     protected $radix_coll;
@@ -39,7 +34,6 @@ class URIMediaPurge extends Model
         parent::__construct($context);
 
         $this->dc = $context->getService('doctrine');
-        $this->preferences = $context->getService('preferences');
         $this->radix_coll = $context->getService('foolfuuka.radix_collection');
         $this->media_factory = $this->getContext()->getService('foolfuuka.media_factory');
     }
