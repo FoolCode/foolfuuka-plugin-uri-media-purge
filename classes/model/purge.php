@@ -83,7 +83,7 @@ class URIMediaPurge extends Model
         $uris = preg_split('/\r\n|\r|\n/', $input);
         $data = [];
 
-        foreach ($urls as $link) {
+        foreach ($uris as $link) {
             if (preg_match('/\/(\w+)\/(thumb|image)\/(?:\d+)\/(?:\d+)\/((?:\d+)s?\.(?:\w+))$/', $link, $match)) {
                 try {
                     $radix = $this->findBoard($match[1]);
