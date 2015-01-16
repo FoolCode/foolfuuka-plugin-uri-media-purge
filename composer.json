@@ -1,7 +1,7 @@
 {
   "name": "foolz/foolfuuka-plugin-uri-media-purge",
   "type": "foolz-foolfuuka-plugin",
-  "description": "This plugin allows moderators and administrators to ban and remove images with URIs.",
+  "description": "Allows administrators and moderators to delete content by providing the URI to the file.",
   "version": "1.0.0",
   "keywords": ["uri", "media", "purge"],
   "homepage": "http://www.foolz.us",
