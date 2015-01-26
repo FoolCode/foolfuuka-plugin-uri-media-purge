@@ -1,7 +1,7 @@
 <?php
 
-use Foolz\Foolframe\Model\Autoloader;
-use Foolz\Foolframe\Model\Context;
+use Foolz\FoolFrame\Model\Autoloader;
+use Foolz\FoolFrame\Model\Context;
 use Foolz\Plugin\Event;
 
 class HHVM_URIMediaPurge
@@ -16,12 +16,12 @@ class HHVM_URIMediaPurge
                 $autoloader = $context->getService('autoloader');
 
                 $autoloader->addClassMap([
-                    'Foolz\Foolframe\Controller\Admin\Plugins\URIMediaPurge' => __DIR__ . '/classes/controller/admin.php',
-                    'Foolz\Foolfuuka\Plugins\URIMediaPurge\Model\URIMediaPurge' => __DIR__ . '/classes/model/purge.php'
+                    'Foolz\FoolFrame\Controller\Admin\Plugins\URIMediaPurge' => __DIR__ . '/classes/controller/admin.php',
+                    'Foolz\FoolFuuka\Plugins\URIMediaPurge\Model\URIMediaPurge' => __DIR__ . '/classes/model/purge.php'
                 ]);
 
                 $context->getContainer()
-                    ->register('foolfuuka-plugin.uri_media_purge', 'Foolz\Foolfuuka\Plugins\URIMediaPurge\Model\URIMediaPurge')
+                    ->register('foolfuuka-plugin.uri_media_purge', 'Foolz\FoolFuuka\Plugins\URIMediaPurge\Model\URIMediaPurge')
                     ->addArgument($context);
 
                 Event::forge('Foolz\FoolFrame\Model\Context::handleWeb#obj.afterAuth')
@@ -33,7 +33,7 @@ class HHVM_URIMediaPurge
                                     '/admin/plugins/uri_media_purge/{_suffix}',
                                     [
                                         '_suffix' => 'manage',
-                                        '_controller' => 'Foolz\Foolframe\Controller\Admin\Plugins\URIMediaPurge::manage'
+                                        '_controller' => 'Foolz\FoolFrame\Controller\Admin\Plugins\URIMediaPurge::manage'
                                     ],
                                     [
                                         '_suffix' => '.*'

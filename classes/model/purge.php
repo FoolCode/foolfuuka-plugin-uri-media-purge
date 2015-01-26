@@ -1,16 +1,16 @@
 <?php
 
-namespace Foolz\Foolfuuka\Plugins\URIMediaPurge\Model;
+namespace Foolz\FoolFuuka\Plugins\URIMediaPurge\Model;
 
-use Foolz\Foolframe\Model\Context;
-use Foolz\Foolframe\Model\Model;
-use Foolz\Foolframe\Model\Preferences;
+use Foolz\FoolFrame\Model\Context;
+use Foolz\FoolFrame\Model\Model;
+use Foolz\FoolFrame\Model\Preferences;
 
-use Foolz\Foolfuuka\Model\Comment;
-use Foolz\Foolfuuka\Model\CommentBulk;
-use Foolz\Foolfuuka\Model\CommentFactory;
-use Foolz\Foolfuuka\Model\Media;
-use Foolz\Foolfuuka\Model\MediaFactory;
+use Foolz\FoolFuuka\Model\Comment;
+use Foolz\FoolFuuka\Model\CommentBulk;
+use Foolz\FoolFuuka\Model\CommentFactory;
+use Foolz\FoolFuuka\Model\Media;
+use Foolz\FoolFuuka\Model\MediaFactory;
 
 class URIMediaPurge extends Model
 {
@@ -94,7 +94,7 @@ class URIMediaPurge extends Model
                         $media = new Media($this->getContext(), CommentBulk::forge($radix, null, $media));
                         $media->ban(true);
                     }
-                } catch (\Foolz\Foolfuuka\Model\MediaNotFoundException $e) {
+                } catch (\Foolz\FoolFuuka\Model\MediaNotFoundException $e) {
 
                 }
             }
