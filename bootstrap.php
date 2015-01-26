@@ -24,7 +24,7 @@ class HHVM_URIMediaPurge
                     ->register('foolfuuka-plugin.uri_media_purge', 'Foolz\Foolfuuka\Plugins\URIMediaPurge\Model\URIMediaPurge')
                     ->addArgument($context);
 
-                Event::forge('Foolz\Foolframe\Model\Context::handleWeb#obj.afterAuth')
+                Event::forge('Foolz\FoolFrame\Model\Context::handleWeb#obj.afterAuth')
                     ->setCall(function ($result) use ($context) {
                         // don't add the admin panels if the user is not an admin
                         if ($context->getService('auth')->hasAccess('maccess.admin')) {
@@ -41,7 +41,7 @@ class HHVM_URIMediaPurge
                                 )
                             );
 
-                            Event::forge('Foolz\Foolframe\Controller\Admin::before#var.sidebar')
+                            Event::forge('Foolz\FoolFrame\Controller\Admin::before#var.sidebar')
                                 ->setCall(function ($result) {
                                     $sidebar = $result->getParam('sidebar');
                                     $sidebar[]['plugins'] = [
